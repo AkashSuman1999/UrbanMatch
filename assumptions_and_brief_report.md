@@ -9,7 +9,9 @@
 
 # Brief explanation
 ## Add User Update Endpoint:
-Endpoint : /users/{user_id}, HTTP METHOD : PUT and it is expecting updated user details in its payload.
+Endpoint : /users/{user_id}, HTTP METHOD : PUT. 
+
+It is expecting updated user details in its payload.
 It will update in the following steps:
 1. When this API is triggered, firstly we are fetching the user details for the given user_id from the database.
 2. then we are converting the existing_user details into dictionary and updating it from the payload we received from API.
@@ -17,7 +19,8 @@ It will update in the following steps:
 4. Finally we are updating the User object into the database and returning the updated user details to the API response.
 
 ## Add User Deletion Endpoint:
-Endpoint : /users/{user_id}, HTTP METHOD : DELETE
+Endpoint : /users/{user_id}, HTTP METHOD : DELETE.
+
 We have introduced a new column named "status" to store if the user is "active" or "inactive".
 1. When this API is triggered, firstly we are fetching the user details for the given user_id from the database.
 2. then we update the user's status to "inactive" and save the changes into the database
